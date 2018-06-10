@@ -50,13 +50,13 @@ class App extends Component {
             stabilization: {iterations: 150}
           }
         },
-        style: {width: "900px", height: "900px"}
+        style: {width: "450px", height: "450px"}
       };
     }
   componentDidMount() {
     var container = document.getElementById('mynetwork');
     
-    fetch('http://localhost:8080/graph')
+    fetch('http://localhost:8080/graph/belong')
       .then((response) => response.json())
       .then((responseJson) => {
         this.setState({
